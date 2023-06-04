@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
       // Aqui você pode enviar esses valores para o backend usando uma solicitação HTTP (por exemplo, usando fetch ou XMLHttpRequest)
       // Exemplo com fetch:
-      fetch('http://ec2-123-456-789-012.compute-1.amazonaws.com/api/doacao', {
+      fetch('http://107.23.247.169/api/doacao', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
