@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Bridge - ONG de Doações</title>
+  <link rel="stylesheet" type="text/css" href="site.css">
+</head>
+<body>
+  <header>
+    <h1>Food Bridge - ONG de Doações</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Página Inicial</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Faça uma Doação</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="intro">
+      <h2>Bem-vindo à Food Bridge</h2>
+      <p>Ajude-nos a fazer a diferença na vida das pessoas que mais precisam.</p>
+    </section>
+    
+    <section id="about">
+      <h2>Sobre Nós</h2>
+      <p>Uma breve descrição sobre a Food Bridge e seus objetivos.</p>
+    </section>
+    
+    <section id="donate">
+      <h2>Faça uma Doação</h2>
+      <form id="donationForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="amount">Valor da Doação:</label>
+        <input type="number" id="amount" name="amount" min="1" required>
+        
+        <button type="submit">Enviar Doação</button>
+      </form>
+    </section>
+    
+    <section id="contact">
+      <h2>Contato</h2>
+      <p>Entre em contato conosco para mais informações sobre a Food Bridge.</p>
+      <a href="mailto:contato@foodbridge.org">contato@foodbridge.org</a>
+    </section>
+  </main>
+  
+  <footer>
+    <p>Todos os direitos reservados &copy; 2023 Food Bridge - ONG de Doações</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
