@@ -32,35 +32,6 @@ resource "aws_s3_bucket_website_configuration" "website" {
   }
 }
 
-#S3 UPLOAD OBJECT
-resource "aws_s3_bucket_object" "error" {
-  key = "error.html"
-  bucket = aws_s3_bucket.s3-bucket-guedson2.id
-  source = "error.html"
-  content_type = "text/html"
-}
-
-resource "aws_s3_bucket_object" "cadastro-doador" {
-  key = "cadastro-doador.html"
-  bucket = aws_s3_bucket.s3-bucket-guedson2.id
-  source = "cadastro-doador.html"
-  content_type = "text/html"
-}
-
-resource "aws_s3_bucket_object" "cadastro-organizacao" {
-  key = "cadastro-organizacao.html"
-  bucket = aws_s3_bucket.s3-bucket-guedson2.id
-  source = "cadastro-organizacao.html"
-  content_type = "text/html"
-}
-
-resource "aws_s3_bucket_object" "doacoes" {
-  key = "doacoes.html"
-  bucket = aws_s3_bucket.s3-bucket-guedson2.id
-  source = "doacoes.html"
-  content_type = "text/html"
-}
-
 resource "aws_s3_bucket_object" "index" {
   key = "index.html"
   bucket = aws_s3_bucket.s3-bucket-guedson2.id
@@ -68,17 +39,17 @@ resource "aws_s3_bucket_object" "index" {
   content_type = "text/html"
 }
 
-resource "aws_s3_bucket_object" "main" {
-  key = "main.js"
+resource "aws_s3_bucket_object" "script" {
+  key = "script.js"
   bucket = aws_s3_bucket.s3-bucket-guedson2.id
-  source = "main.js"
+  source = "script.js"
   content_type = "text/js"
 }
 
-resource "aws_s3_bucket_object" "styles_css" {
-  key = "styles.css"
+resource "aws_s3_bucket_object" "site_css" {
+  key = "site.css"
   bucket = aws_s3_bucket.s3-bucket-guedson2.id
-  source = "styles.css"
+  source = "site.css"
   content_type = "text/css"
 }
 
