@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
       row.appendChild(emailCell);
 
       const amountCell = document.createElement('td');
-      amountCell.textContent = doacao.valor;
+      amountCell.textContent = doacao.amount;
       row.appendChild(amountCell);
 
       doacoesTable.appendChild(row);
