@@ -52,10 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
       nameCell.textContent = doacao.nome;
       row.appendChild(nameCell);
 
-      const emailCell = document.createElement('td');
-      emailCell.textContent = doacao.email;
-      row.appendChild(emailCell);
-
       const amountCell = document.createElement('td');
       amountCell.textContent = doacao.amount;
       row.appendChild(amountCell);
