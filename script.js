@@ -1,4 +1,3 @@
-// Código JavaScript para a comunicação com o backend
 document.addEventListener('DOMContentLoaded', function() {
   // Obtenha uma referência ao formulário de doação
   const donationForm = document.querySelector('form');
@@ -12,39 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = document.getElementById('email').value;
     const amount = document.getElementById('amount').value;
 
-    // Aqui você pode enviar esses valores para o backend usando uma solicitação HTTP (por exemplo, usando fetch ou XMLHttpRequest)
-    // Exemplo com fetch:
-
-    fetch('http://107.23.247.169/api/doacoes')
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(doacoes) {
-      const doacoesTable = document.getElementById('doacoesTable');
-
-      doacoes.forEach(function(doacao) {
-        const row = document.createElement('tr');
-
-        const nameCell = document.createElement('td');
-        nameCell.textContent = doacao.nome;
-        row.appendChild(nameCell);
-
-        const emailCell = document.createElement('td');
-        emailCell.textContent = doacao.email;
-        row.appendChild(emailCell);
-
-        const amountCell = document.createElement('td');
-        amountCell.textContent = doacao.valor;
-        row.appendChild(amountCell);
-
-        doacoesTable.appendChild(row);
-      });
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-});
-
+    // Envia esses valores para o backend usando uma solicitação HTTP com fetch
     fetch('http://107.23.247.169/api/doacao', {
       method: 'POST',
       headers: {
@@ -69,3 +36,34 @@ document.addEventListener('DOMContentLoaded', function() {
       alert('Ocorreu um erro ao processar a sua doação. Por favor, tente novamente mais tarde.');
     });
   });
+
+  // Envia uma solicitação GET para recuperar todas as doações
+  fetch('http://107.23.247.169/api/doacoes')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(doacoes) {
+    const doacoesTable = document.getElementById('doacoesTable');
+
+    doacoes.forEach(function(doacao) {
+      const row = document.createElement('tr');
+
+      const nameCell = document.createElement('td');
+      nameCell.textContent = doacao.nome;
+      row.appendChild(nameCell);
+
+      const emailCell = document.createElement('td');
+      emailCell.textContent = doacao.email;
+      row.appendChild(emailCell);
+
+      const amountCell = document.createElement('td');
+      amountCell.textContent = doacao.valor;
+      row.appendChild(amountCell);
+
+      doacoesTable.appendChild(row);
+    });
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
+});
