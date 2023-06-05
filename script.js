@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const amount = document.getElementById('amount').value;
 
     // Envia esses valores para o backend usando uma solicitação HTTP com fetch
-    fetch('http://107.23.247.169/api/doacao', {
+    fetch('http://54.80.68.60/api/doacao', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Envia uma solicitação GET para recuperar todas as doações
-  fetch('http://107.23.247.169/api/doacoes')
+  fetch('http://54.80.68.60/api/doacoes')
   .then(function(response) {
     return response.json();
   })
